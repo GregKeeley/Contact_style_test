@@ -25,7 +25,12 @@ class allContactsViewController: UIViewController {
 }
 
 extension allContactsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let editViewController = TableViewController()
+        let contact = testContacts[indexPath.row]
+        dump(contact)
+        editViewController.contact = contact
+    }
 }
 
 extension allContactsViewController: UITableViewDataSource {

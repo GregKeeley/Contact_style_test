@@ -16,13 +16,7 @@ class TableViewController: UITableViewController {
     
     @IBOutlet weak var addCellButton: UIButton!
     
-    var contact: CustomContact? {
-        didSet {
-            //            DispatchQueue.main.async {
-            //                self.loadContact()
-            //            }
-        }
-    }
+    var contact: CustomContact?
     
     var numberOfRowsForSection3 = 1 {
         didSet {
@@ -35,12 +29,12 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    private func loadContact() {
-        nameLabel.text = contact?.name
-        emailLabel.text = contact?.email
-        dobLabel.text = contact?.dob.description
-    }
+    //TODO: Each cell needs an identifier and configuration block for the reusableCells
+//    private func loadContact() {
+//        nameLabel.text = contact?.name
+//        emailLabel.text = contact?.email
+//        dobLabel.text = contact?.dob.description
+//    }
     
     
     @IBAction func addCellsButtonPressed(_ sender: UIButton) {
@@ -60,6 +54,12 @@ class TableViewController: UITableViewController {
         }
         return 1
     }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "name", for: indexPath)
+//        let name = contact?.name
+//        cell.detailTextLabel?.text = name
+//        return cell
+//    }
 }
 
 

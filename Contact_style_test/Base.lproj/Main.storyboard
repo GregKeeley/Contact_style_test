@@ -188,9 +188,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addCellButton" destination="eRW-SD-YBu" id="TIX-dV-wWf"/>
-                        <outlet property="dobLabel" destination="Fno-Km-u7c" id="p5o-3V-s6g"/>
-                        <outlet property="emailLabel" destination="pdz-Xx-rDL" id="rjP-qV-bEV"/>
-                        <outlet property="nameLabel" destination="9rf-Ym-iRe" id="aop-hw-3Ly"/>
+                        <outlet property="dobLabel" destination="Fno-Km-u7c" id="rv5-fL-faQ"/>
+                        <outlet property="emailLabel" destination="pdz-Xx-rDL" id="mOD-ko-WOU"/>
+                        <outlet property="nameLabel" destination="9rf-Ym-iRe" id="uwz-Ra-jzT"/>
                     </connections>
                 </tableViewController>
             </objects>

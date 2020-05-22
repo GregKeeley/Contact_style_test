@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var dobLabel: UILabel!
@@ -18,17 +18,19 @@ class TableViewController: UITableViewController {
     
     var contact: CustomContact? {
         didSet {
-//            DispatchQueue.main.async {
-//                self.loadContact()
-//            }
+            //            DispatchQueue.main.async {
+            //                self.loadContact()
+            //            }
         }
     }
     
-    var numberOfRows = 1 {
+    var numberOfRowsForSection3 = 1 {
         didSet {
             tableView.reloadData()
         }
     }
+    
+    var cellsCollapsed = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,16 +40,25 @@ class TableViewController: UITableViewController {
         nameLabel.text = contact?.name
         emailLabel.text = contact?.email
         dobLabel.text = contact?.dob.description
-        }
+    }
     
     
     @IBAction func addCellsButtonPressed(_ sender: UIButton) {
-        
-        numberOfRows = 4
+        if cellsCollapsed {
+            numberOfRowsForSection3 = 1
+            cellsCollapsed.toggle()
+        } else {
+            numberOfRowsForSection3 = 4
+            cellsCollapsed.toggle()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRows
+        print(section)
+        if section == 3 {
+            return numberOfRowsForSection3
+        }
+        return 1
     }
 }
 

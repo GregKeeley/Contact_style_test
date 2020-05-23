@@ -10,7 +10,6 @@
         <!--Table View Controller-->
         <scene sceneID="AnY-fz-w6m">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf5-Ac-v2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="wgE-KL-GUj" customClass="TableViewController" customModule="Contact_style_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="SML-K2-xC8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -193,6 +192,7 @@
                         <outlet property="nameLabel" destination="9rf-Ym-iRe" id="uwz-Ra-jzT"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf5-Ac-v2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2473.913043478261" y="70.982142857142847"/>
         </scene>
@@ -247,7 +247,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OCr-cg-CF5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WGn-JY-UPH"/>
+                    <navigationItem key="navigationItem" id="WGn-JY-UPH">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus.circle" catalog="system" id="YWT-R4-vNp">
+                            <connections>
+                                <action selector="addContactButtonPressed:" destination="F0V-gD-3uM" id="6J1-7e-poY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="A0k-WZ-EWQ" id="LJe-he-Su4"/>
                     </connections>
@@ -275,4 +281,7 @@
             <point key="canvasLocation" x="582.60869565217399" y="70.982142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

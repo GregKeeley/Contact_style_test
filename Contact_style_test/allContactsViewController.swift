@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Contacts
+import ContactsUI
 
 class allContactsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     var testContacts = CustomContact.getTestData()
+    var contacts = [CNContact]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +25,16 @@ class allContactsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    //MARK:- Presents the native iOS contacts View Controller to ge the user
+    @IBAction func addContactButtonPressed(_ sender: UIBarButtonItem) {
+        let contactPicker = CNContactPickerViewController()
+        contactPicker.delegate = self
+        present(contactPicker, animated: true)
+    }
 }
-
+extension allContactsViewController: CNContactPickerDelegate {
+    
+}
 extension allContactsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let editViewController = TableViewController()

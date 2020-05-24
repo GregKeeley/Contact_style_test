@@ -57,10 +57,14 @@ extension allContactsViewController: CNContactPickerDelegate {
 //MARK:- TableViewDelegate & DataSource
 extension allContactsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let editViewController = TableViewController()
+        
         let contact = testContacts[indexPath.row]
-        dump(contact)
-        editViewController.contact = contact
+//        let editViewController = TableViewController(contact: contact)
+        let contactViewController = CNContactViewController(forUnknownContact: contact.contactValue)
+//        editViewController.contact = contact
+//        editViewController.cnContact = contact.contactValue
+//        navigationController?.pushViewController(editViewController, animated: true)
+        navigationController?.pushViewController(contactViewController, animated: true)
     }
 }
 

@@ -17,6 +17,7 @@
 		888E7A5B247760970030B414 /* Contact_style_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888E7A5A247760970030B414 /* Contact_style_testUITests.swift */; };
 		888E7A692477610A0030B414 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888E7A682477610A0030B414 /* ContactModel.swift */; };
 		888E7A6B247763460030B414 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888E7A6A247763460030B414 /* TableViewController.swift */; };
+		88CF1F4F247AD74C005A1CAA /* AddCellsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CF1F4E247AD74C005A1CAA /* AddCellsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		888E7A5C247760970030B414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888E7A682477610A0030B414 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		888E7A6A247763460030B414 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		88CF1F4E247AD74C005A1CAA /* AddCellsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCellsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				888E7A38247760930030B414 /* AppDelegate.swift */,
 				888E7A3A247760930030B414 /* SceneDelegate.swift */,
 				888E7A3C247760930030B414 /* allContactsViewController.swift */,
+				88CF1F4E247AD74C005A1CAA /* AddCellsCell.swift */,
 				888E7A6A247763460030B414 /* TableViewController.swift */,
 				888E7A682477610A0030B414 /* ContactModel.swift */,
 				888E7A3E247760930030B414 /* Main.storyboard */,
@@ -270,6 +273,7 @@
 				888E7A692477610A0030B414 /* ContactModel.swift in Sources */,
 				888E7A6B247763460030B414 /* TableViewController.swift in Sources */,
 				888E7A3B247760930030B414 /* SceneDelegate.swift in Sources */,
+				88CF1F4F247AD74C005A1CAA /* AddCellsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
